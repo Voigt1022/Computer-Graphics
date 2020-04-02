@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>WuYutao_ProjC</title>
+</head>
+<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+
+<body onload="main()">
+	<canvas id="webgl" width="600" height="600">
+		Please use a browser that supports "canvas"
+	</canvas>
+		<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+		 (where? look inside main(), inside its 'tick()' function, where we
+		 display the 'current angle' value.
+	-->
+		<div>
+			<div style="float:left;margin-right:20px">
+				<p>Move the camera:</p>
+				<img src="../pic/wasd.png" alt="wasd" width="120" height="60">
+			</div>
+			<div style="float:left;margin-right:20px">
+				<p>Camera direction:</p>
+				<img src="../pic/ijkl.png" alt="ijkl" width="120" height="60">
+			</div>
+			<div style="float:left;margin-right:20px">
+				<p>switch for head light:</p>
+				<img src="../pic/q.png" alt="q" width="40" height="30">
+			</div>
+			<div style="float:left;margin-right:20px">
+				<p>switch for world light:</p>
+				<img src="../pic/e.png" alt="e" width="40" height="30">
+			</div>
+			<div style="float:left;margin-right:20px">
+				<p>switch for shading mode:</p>
+				<img src="../pic/u.png" alt="u" width="40" height="30">
+			</div>
+			<div style="float:left;margin-right:20px">
+				<p>switch for lighting mode:</p>
+				<img src="../pic/o.png" alt="o" width="40" height="30">
+			</div>
+		</div>
+		<p id="sMode">Shading Mode: Phong shading</p>
+		<p id="lMode">Lighting Mode: Bilnn-Phong lighting</p>
+		<div>
+			<div id="Ambient">
+				<table>
+					<tr>
+						<td>Position of world light: </td>
+						<td>X: <input type="text" id="PX" value="-111.0" /></td>
+						<td>Y: <input type="text" id="PY" value="2.0" /></td>
+						<td>Z: <input type="text" id="PZ" value="5.0" /></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+	<script src="../lib/webgl-utils.js"></script>
+	<script src="../lib/webgl-debug.js"></script>
+	<script src="../lib/cuon-utils.js"></script>
+	<script src="../lib/cuon-matrix-quat03.js"></script>
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+	<script src="WuYutao_ProjC.js"></script>
+</body>
+
+</html>
